@@ -1,0 +1,64 @@
+.sit-foot {
+  margin-top: 10rem;
+  padding: 3.25rem 0;
+  & > .container {
+    margin-bottom: 1.625rem;
+    gap: 3rem 1rem;
+    @include breakpoint-down(small) {
+      justify-items: flex-start;
+    }
+
+    h2 {
+      margin-bottom: 3.125rem;
+      color: inherit;
+    }
+
+    p {
+      --width: 39ch;
+      line-height: 1.875rem;
+      color: inherit;
+    }
+  }
+
+  &__link {
+    ul {
+      gap: 1rem;
+      color: inherit;
+
+      > li {
+        color: inherit;
+
+        > a {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  &__contact {
+    ul {
+      gap: 2.25rem;
+      > li {
+        > a {
+          > * {
+            > * {
+              height: 3.5625rem;
+              aspect-ratio: 1 /1;
+              margin-right: 1rem;
+              border-radius: var(--border-radius-8);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    p {
+      color: inherit;
+      margin-top: 1rem;
+    }
+
+    border-top: 1px solid rgba(0, 0, 0, 0.13);
+  }
+}

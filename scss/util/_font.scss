@@ -1,0 +1,27 @@
+@each $screen-size, $property in $type-scale {
+  @each $prop, $value in $property {
+    .fs-#{$prop} {
+      font-size: var(--fs-#{$prop});
+    }
+  }
+}
+
+@each $prop, $value in $type-weight {
+  .fw-#{$prop} {
+    font-weight: var(--fw-#{$prop});
+  }
+}
+
+@each $prop, $value in $type-family {
+  .ff-#{$prop} {
+    font-family: var(--ff-#{$prop});
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

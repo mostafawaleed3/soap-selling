@@ -1,0 +1,28 @@
+body {
+  font-family: var(--ff-poppins);
+  color: var(--clr-primary-600);
+}
+
+h1 {
+  font-family: var(--ff-didotLTStd);
+  font-size: var(--fs-xl);
+  text-transform: capitalize;
+  line-height: 87%;
+  @include breakpoint(xlarge) {
+    max-width: 14ch;
+  }
+}
+
+h2:not(footer h2) {
+  font-family: var(--ff-didotLTStd);
+  font-size: var(--fs-lg);
+}
+
+h2,
+h3 {
+  line-height: 120%;
+}
+
+p {
+  max-width: var(--width, 33ch);
+}

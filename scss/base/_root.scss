@@ -1,0 +1,40 @@
+:root {
+  // Colors
+  @each $color, $shade in $colors {
+    @each $prop, $value in $shade {
+      --clr-#{$color}-#{$prop}: #{$value};
+    }
+  }
+
+  // Font Size
+  @each $screen-size, $property in $type-scale {
+    @if $screen-size == small {
+      @each $prop, $value in $property {
+        --fs-#{$prop}: #{$value};
+      }
+    } @else {
+      @include breakpoint(large) {
+        @each $prop, $value in $property {
+          --fs-#{$prop}: #{$value};
+        }
+      }
+    }
+  }
+
+   // Font Weight
+   @each $radius, $radius-value in $border-radius {
+    --border-radius-#{$radius}: #{$radius-value};
+  }
+
+  // Font Weight
+  @each $weight, $weight-value in $type-weight {
+    --fw-#{$weight}: #{$weight-value};
+  }
+
+  // Font Family
+  @each $family, $family-name in $type-family {
+    --ff-#{$family}: #{$family-name};
+  }
+
+  --letter-spacing-1: 0.1em;
+}

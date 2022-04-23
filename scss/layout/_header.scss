@@ -1,0 +1,38 @@
+.site-head {
+  padding-top: 1.875rem;
+
+  &__logo {
+    flex: 1;
+  }
+
+  &__middle {
+    gap: 2.75rem;
+    @include breakpoint-down(large) {
+      justify-content: center;
+      position: absolute;
+      inset: 0 0 0 50%;
+      z-index: 999;
+      background: var(--clr-primary-600);
+      transform: translateX(100%);
+      &[data-visible='true'] {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__navigation {
+    > ul {
+      gap: 2.75rem;
+    }
+  }
+
+  [role='button'] {
+    cursor: pointer;
+    @include breakpoint(xlarge) {
+      display: none;
+    }
+    &#nav-close {
+      @include position(absolute, $top: 3rem, $right: 3rem);
+    }
+  }
+}
