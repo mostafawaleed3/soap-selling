@@ -1,15 +1,15 @@
 // ==================== SHOW MENU ====================
-const headMiddle = document.getElementById('head-middle'),
+const headNav = document.getElementById('head-navigation'),
   navToggle = document.getElementById('nav-toggle'),
   navClose = document.getElementById('nav-close'),
-  visibility = headMiddle.getAttribute('data-visible');
+  visibility = headNav.getAttribute('data-visible');
 
 // ===== MENU SHOW =====
 navToggle.addEventListener('click', () => {
-  headMiddle.setAttribute('data-visible', true);
+  headNav.setAttribute('data-visible', true);
 });
 
 // ===== MENU CLOSE =====
 navClose.addEventListener('click', () => {
-  headMiddle.setAttribute('data-visible', false);
+  headNav.setAttribute('data-visible', false);
 });

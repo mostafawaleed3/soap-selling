@@ -1,26 +1,16 @@
 $type-scale: (
-  'small': (
-    'xl': 3rem,
-    'lg': 2.5rem,
-    '900': 2rem,
-    '800': 1.5rem,
-    '700': 1.5rem,
-    '600': 1.2rem,
-  ),
-  'big': (
-    'xl': 7.1875rem,
-    'lg': 5.3125rem,
-    '900': 3.4375rem,
-    '800': 2.5rem,
-    '700': 2.1875rem,
-    '600': 1.875rem,
-    '500': 1.25rem,
-    '400': 1.125rem,
-    '300': 1rem,
-    '200': 0.875rem,
-  ),
+  'xl': clamp(3rem, 4.5vw + 1rem, 7.1875rem),
+  'lg': clamp(2.5rem, 4vw + 1rem, 5.3125rem),
+  '900': clamp(1.5rem, 2vw + 1rem, 3.4375rem),
+  '800': clamp(1.5rem, 3vw + 1rem, 2.8125rem),
+  '700': clamp(1.5rem, 0.8vw + 1rem, 2.1875rem),
+  '600': clamp(1.2rem, 1vw + 1rem, 1.875rem),
+  '500': 1.25rem,
+  '400': 1.125rem,
+  '300': 1rem,
+  '200': 0.875rem,
 );
-
+  
 $type-family: (
   'poppins': '' Poppins ', sans-serif',
   'didotLTStd': ' Didot LT Std ',

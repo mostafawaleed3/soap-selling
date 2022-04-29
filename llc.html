@@ -12,16 +12,16 @@
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="homepage">
   <!--========== HEADER ==========-->
-  <header class="site-head bg-secondary-200" role="banner">
+  <header class="[ site-head ] [ bg-secondary-200 ]" role="banner">
     <div class="container">
-      <div class="site-head__inner flex-row">
-        <a aria-label="Header logo" class="site-head__logo flex-row center-y ff-didotLTStd fs-600 text-primary-600" href="/">
-        <h3>Freshwaves LLC</h3></a>
-        <div class="site-head__middle flex-row-responsive center-y" data-visible="false" id="head-middle">
-          <nav aria-label="primary" class="site-head__navigation" tabindex="-1">
-            <ul class="flex-row-responsive center-y" role="list">
+      <div class="[ site-head__inner ] [ flex-space ]">
+        <a aria-label="Freshwaves LLC - home" class="[ site-head__brand ] [ center-y ]" href="/">
+        <h1 class="fs-700">Freshwaves LLC</h1></a>
+        <div class="[ site-head__navigation ] [ flex-column-responsive ]" data-visible="false" id="head-navigation">
+          <nav aria-label="primary" tabindex="-1">
+            <ul class="flex-column-responsive" role="list">
               <li class="uppercase fs-300 text-neutral-900 letter-spacing-1">
                 <a href="">Home</a>
               </li>
@@ -40,249 +40,262 @@
               <li class="uppercase fs-300 text-neutral-900 letter-spacing-1">
                 <a href="">Blog</a>
               </li>
+              <li>
+                <a class="[ button ]" data-type="head" href="#">Shop Now</a>
+              </li>
             </ul>
-          </nav><a class="btn-head" href="#">Shop Now</a>
-          <div aria-controls="head-middle" aria-expanded="true" class="fs-500 text-neutral-100" id="nav-close" role="button">
-            <span aria-hidden="true" aria-label="Close navigation" class="fas fa-times"></span>
+          </nav>
+          <div aria-controls="head-navigation" aria-expanded="true" aria-label="Close navigation" class="fs-500 text-neutral-100" id="nav-close" role="button">
+            <span aria-hidden="true" class="fas fa-times"></span>
           </div>
         </div>
-        <div aria-controls="head-middle" aria-expanded="false" class="fs-500" id="nav-toggle" role="button">
-          <span aria-hidden="true" aria-label="Open navigation" class="fas fa-bars"></span>
+        <div aria-controls="head-navigation" aria-expanded="false" aria-label="Open navigation" class="fs-500" id="nav-toggle" role="button">
+          <span aria-hidden="true" class="fas fa-bars"></span>
         </div>
       </div>
     </div>
   </header>
-  <main class="main" tabindex="-1">
+  <main id="main-content" tabindex="-1">
     <!--=============== hero ===============-->
-    <article class="hero bg-secondary-200" aria-labelledby="hero-title">
-      <div class="container flex-row center-xy">
-        <div>
-          <h1 class="hero-title" id="hero-title">Nourish your skin with an Ayurvedic Mix</h1>
-          <p class="hero-text fs-600 fw-300 text-neutral-800">Creating beauty care treatments that are effective&#44; safe and have withstood the trials of time.</p><a class="btn fs-600 fw-500 letter-spacing-1 bg-primary-600 text-neutral-100" href="">Buy Now</a> <a class="btn fs-600 fw-500 letter-spacing-1 text-primary-600" href="">Products</a>
-        </div>
-        <div class="hero-img center-xy col-6"><img alt="" src="./asset/imgs/Ayurvedic021.png"></div>
-      </div>
+    <article aria-labelledby="hero-title" class="[ hero ] [ bg-secondary-200 ]">
+      <div class="[ container ] [ flex-row align-items-flex-start ]">
+      <div class="flow">
+        <h1 class="fs-xl capitalize" id="hero-title">Nourish your skin with an Ayurvedic Mix</h1>
+        <p class="[ hero__description ] [ fs-600 fw-300 text-neutral-800 ]">Creating beauty care treatments that are effective&#44; safe and have withstood the trials of time.</p><a class="[ button ]" data-type="secondary" href="">Buy Now</a> <a class="[ button ]" data-type="tertiary" href="">Products</a>
+      </div><img loading="lazy"  alt="" src="./asset/imgs/Ayurvedic021.png"></div>
     </article><!--=============== PRODUCTS ===============-->
-    <article class="products container" aria-labelledby="products-title">
-      <header class="main-title flex-space">
-        <h2 id="products-title">Products</h2><a class="btn btn-border-primary flex-space" href=""><span aria-hidden="true" class="fas fa-long-arrow-alt-right"></span>See All</a>
+    <article aria-labelledby="products-title" class="[ products ] [ container ]">
+      <header class="[ headline ] [ flex-space ]">
+        <h2 id="products-title">Products</h2><a class="[ button ]" data-type="primary" href=""><span aria-hidden="true" class="fas fa-long-arrow-alt-right"></span>See All</a>
       </header>
-      <ul class="cards auto-grid" role="list">
+      <ul class="[ auto-grid ]" role="list">
         <li class="card">
           <figure>
-            <img alt="" src="./asset/imgs/imgWithBrownShade.png">
-            <h3 class="fs-800 fw-800 text-neutral-100 center-x">Beauty Soaps</h3>
+            <img loading="lazy"  alt="" src="./asset/imgs/imgWithBrownShade.png">
+            <figcaption>
+              <h3 class="[ fs-800 fw-800 text-neutral-100 ] [ center-x ]">Beauty Soaps</h3>
+            </figcaption>
           </figure>
         </li>
         <li class="card">
           <figure>
-            <img alt="" src="./asset/imgs/bodylotion1.png">
-            <h3 class="fs-800 fw-800 text-neutral-100 center-x">Beauty Soaps</h3>
+            <img loading="lazy"  alt="" src="./asset/imgs/bodylotion1.png">
+            <figcaption>
+              <h3 class="[ fs-800 fw-800 text-neutral-100 ] [ center-x ]">Beauty Soaps</h3>
+            </figcaption>
           </figure>
         </li>
         <li class="card">
           <figure>
-            <img alt="" src="./asset/imgs/hairOil1.png">
-            <h3 class="fs-800 fw-800 text-neutral-100 center-x">Beauty Soaps</h3>
+            <img loading="lazy"  alt="" src="./asset/imgs/hairOil1.png">
+            <figcaption>
+              <h3 class="[ fs-800 fw-800 text-neutral-100 ] [ center-x ]">Beauty Soaps</h3>
+            </figcaption>
           </figure>
         </li>
         <li class="card">
           <figure>
-            <img alt="" src="./asset/imgs/facewash1.png">
-            <h3 class="fs-800 fw-800 text-neutral-100 center-x">Beauty Soaps</h3>
+            <img loading="lazy"  alt="" src="./asset/imgs/facewash1.png">
+            <figcaption>
+              <h3 class="[ fs-800 fw-800 text-neutral-100 ] [ center-x ]">Beauty Soaps</h3>
+            </figcaption>
           </figure>
         </li>
       </ul>
-    </article><!--=============== SOAPS ===============-->
-    <article class="soaps container" aria-labelledby="soaps-title">
-      <header class="main-title flex-space">
-        <h2 id="soaps-title">Ayurvedic Soaps</h2><a class="btn btn-border-primary flex-space" href=""><span aria-hidden="true" class="fas fa-long-arrow-alt-right"></span>See All</a>
+    </article>
+    <!--=============== SOAPS ===============-->
+    <article aria-labelledby="soaps-title" class="[ soaps ] [ container ]">
+      <header class="headline flex-space">
+        <h2 id="soaps-title">Ayurvedic Soaps</h2><a class="[ button ]" data-type="primary" href=""><span aria-hidden="true" class="fas fa-long-arrow-alt-right"></span>See All</a>
       </header>
-      <ul class="cards auto-grid" role="list">
+      <ul class="[ auto-grid ]" role="list">
         <li class="card">
-          <div class="card-img"><img alt="" src="./asset/imgs/Ayurvedic022-1.png"></div>
-          <div class="card-body grid align-content-between">
+          <img loading="lazy"  alt="" src="./asset/imgs/Ayurvedic022-1.png">
+          <div class="[ card__body ] [ grid align-content-between ]">
             <h3 class="fs-600 fw-400">Cinnamon Beauty Bar</h3>
             <div class="flex-space">
-              <a class="btn btn-small" href="">Add to cart</a>
+              <a class="[ button ]" data-type="small" href="">Add to cart</a>
               <p class="fs-500">LKR: 170</p>
             </div>
           </div>
         </li>
         <li class="card">
-          <div class="card-img"><img alt="" src="./asset/imgs/Ayurvedic032.png"></div>
-          <div class="card-body grid align-content-between">
+          <img loading="lazy"  alt="" src="./asset/imgs/Ayurvedic032.png">
+          <div class="[ card__body ] [ grid align-content-between ]">
             <h3 class="fs-600 fw-400">Charcoal Cleansing Bar</h3>
             <div class="flex-space">
-              <a class="btn btn-small" href="">Add to cart</a>
+              <a class="[ button ]" data-type="small" href="">Add to cart</a>
               <p class="fs-500">LKR: 170</p>
             </div>
           </div>
         </li>
         <li class="card">
-          <div class="card-img"><img alt="" src="./asset/imgs/Ayurvedic042.png"></div>
-          <div class="card-body grid align-content-between">
+          <img loading="lazy"  alt="" src="./asset/imgs/Ayurvedic042.png">
+          <div class="[ card__body ] [ grid align-content-between ]">
             <h3 class="fs-600 fw-400">Lemongrass Germ Killing Bar</h3>
             <div class="flex-space">
-              <a class="btn btn-small" href="">Add to cart</a>
+              <a class="[ button ]" data-type="small" href="">Add to cart</a>
               <p class="fs-500">LKR: 170</p>
             </div>
           </div>
         </li>
         <li class="card">
-          <div class="card-img"><img alt="" src="./asset/imgs/Ayurvedic011.png"></div>
-          <div class="card-body grid align-content-between">
+          <img loading="lazy"  alt="" src="./asset/imgs/Ayurvedic011.png">
+          <div class="[ card__body ] [ grid align-content-between ]">
             <h3 class="fs-600 fw-400">Ayurveda Beauty Bar</h3>
             <div class="flex-space">
-              <a class="btn btn-small" href="">Add to cart</a>
+              <a class="[ button ]" data-type="small" href="">Add to cart</a>
               <p class="fs-500">LKR: 170</p>
             </div>
           </div>
         </li>
       </ul>
-    </article><!--=============== Categories ===============-->
-    <article class="categories container" aria-labelledby="categories-title">
-      <header class="main-title flex-space">
-        <h2 id="categories-title">Top Categories</h2><a class="btn btn-border-primary flex-space" href=""><span aria-hidden="true" class="fas fa-long-arrow-alt-right"></span>See All</a>
+    </article>
+    <!--=============== Categories ===============-->
+    <article aria-labelledby="categories-title" class="[ categories ] [ container ]">
+      <header class="[ headline ] [ flex-space ]">
+        <h2 id="categories-title">Top Categories</h2><a class="[ button ]" data-type="primary" href=""><span aria-hidden="true" class="fas fa-long-arrow-alt-right"></span>See All</a>
       </header>
-      <ul class="cards auto-grid" role="list">
+      <ul class="[ auto-grid ]" role="list">
         <li class="card">
-          <img alt="" src="./asset/imgs/Ayurvedic022-1.png">
-          <div class="line bg-primary-600"></div>
+          <img loading="lazy"  alt="" src="./asset/imgs/Ayurvedic022-1.png">
+          <div class="[ line ] [ bg-primary-600 ]"></div>
           <h3 class="fw-500 fs-600 text-primary-600 text-center">Beauty Bars</h3>
         </li>
         <li class="card">
-          <img alt="" src="./asset/imgs/Ayurvedic032.png">
-          <div class="line bg-primary-600"></div>
+          <img loading="lazy"  alt="" src="./asset/imgs/Ayurvedic032.png">
+          <div class="[ line ] [ bg-primary-600 ]"></div>
           <h3 class="fw-500 fs-600 text-primary-600 text-center">Hair Oil</h3>
         </li>
         <li class="card">
-          <img alt="" src="./asset/imgs/Ayurvedic042.png">
-          <div class="line bg-primary-600"></div>
+          <img loading="lazy"  alt="" src="./asset/imgs/Ayurvedic042.png">
+          <div class="[ line ] [ bg-primary-600 ]"></div>
           <h3 class="fw-500 fs-600 text-primary-600 text-center">Face Wash</h3>
         </li>
         <li class="card">
-          <img alt="" src="./asset/imgs/Ayurvedic011.png">
-          <div class="line bg-primary-600"></div>
+          <img loading="lazy"  alt="" src="./asset/imgs/Ayurvedic011.png">
+          <div class="[ line ] [ bg-primary-600 ]"></div>
           <h3 class="fw-500 fs-600 text-primary-600 text-center">Body Lotion</h3>
         </li>
       </ul>
-    </article><!--=============== Who We Are ? ===============-->
-    <article class="we text-neutral-100 flex-row center-y" aria-labelledby="we-title">
+    </article>
+    <!--=============== Who We Are ? ===============-->
+    <article aria-labelledby="about-us-title" class="[ about-us ] [ text-neutral-100 ] [ center-y ]">
       <div class="container">
-        <div class="we-headline">
-          <h2 id="we-title">Who We Are ?</h2>
-        </div>
-        <div class="we-content flex-space">
-          <div class="we-description">
-            <h3 class="fs-900 fw-400 ff-didotLTStd">The Ultimate Cream of Sandalwood.</h3>
-            <p class="fs-600 fw-300">The innovation of this marvel cream&#44; dates back to 1948. In Veyangoda&#44; a city in the Gampaha District&#44; was an Ayurvedic shop that was owned by a renowned Ayurvedic Physician&#44; by the name of Dr. R. D. P Jayaratne&#44; he inherited this Ayurvedic shop from his forefathers.</p><a class="btn btn-border-white" href="">Explore More</a>
-          </div>
-          <div class="we-img col-6 center-xy bg-secondary-200"><img alt="" src="./asset/imgs/video-img1.png"></div>
-        </div>
+        <header class="headline">
+          <h2 id="about-us-title">Who We Are ?</h2>
+        </header>
+        <div class="[ about-us__content ] [ flex-space ]">
+        <div class="about-us__description">
+          <h3 class="fs-900 fw-400 ff-didotLTStd">The Ultimate Cream of Sandalwood.</h3>
+          <p class="fs-600 fw-300">The innovation of this marvel cream&#44; dates back to 1948. In Veyangoda&#44; a city in the Gampaha District&#44; was an Ayurvedic shop that was owned by a renowned Ayurvedic Physician&#44; by the name of Dr. R. D. P Jayaratne&#44; he inherited this Ayurvedic shop from his forefathers.</p><a class="[ button ]" data-type="border-white" href="">Explore More</a>
+        </div><img loading="lazy"  alt="" class="[ bg-secondary-200 ] [ center-xy ]" src="./asset/imgs/video-img1.png"></div>
       </div>
-    </article><!--=============== NEWS ===============-->
-    <article class="news container" aria-labelledby="news-title">
-      <header class="main-title flex-space">
-        <h2 id="news-title">Latest News</h2><a class="btn btn-border-primary flex-space" href=""><span aria-hidden="true" class="fas fa-long-arrow-alt-right"></span>See All</a>
+    </article>
+    <!--=============== NEWS ===============-->
+    <article aria-labelledby="news-title" class="[ news ] [ container ]">
+      <header class="[ headline ] [ flex-space ]">
+        <h2 id="news-title">Latest News</h2>
       </header>
-      <ul class="cards auto-grid" role="list">
+      <ul class="[ auto-grid ]" role="list">
         <li class="card">
-          <div class="card-img"><img alt="" src="./asset/imgs/blog-img11.png"></div>
-          <div class="card-title">
+          <img loading="lazy"  alt="" src="./asset/imgs/blog-img11.png">
+          <div class="card__body">
             <h3 class="fs-600 fw-500">Truly &lsquo;Green&rsquo; Sandalwood Soap</h3>
-            <div class="flex-space">
-              <p class="fs-200"><span aria-hidden="true" class="far fa-calendar"></span>6 October 2021</p>
-              <p class="fs-200"><span aria-hidden="true" class="fas fa-user-alt"></span>Anonymous</p>
-            </div><a class="btn btn-small" href="">Read More</a>
+            <div class="[ card__info ] [ flex-space ]">
+              <time class="fs-200 text-neutral-900" datetime="2021-08-06"><span aria-hidden="true" class="[ far fa-calendar ] [ text-primary-600 ]"></span>6 October 2021</time>
+              <p class="fs-200 text-neutral-900"><span aria-hidden="true" class="[ fas fa-user-alt ] [ text-primary-600 ]"></span>Anonymous</p>
+            </div><a class="[ button ]" data-type="small" href="">Read More</a>
           </div>
         </li>
         <li class="card">
-          <div class="card-img"><img alt="" src="./asset/imgs/blog-img21.png"></div>
-          <div class="card-title">
+          <img loading="lazy"  alt="" src="./asset/imgs/blog-img21.png">
+          <div class="card__body">
             <h3 class="fs-600 fw-500">Handmade Natural Soap is Actually Soap</h3>
-            <div class="flex-space">
-              <p class="fs-200"><span aria-hidden="true" class="far fa-calendar"></span>6 October 2021</p>
-              <p class="fs-200"><span aria-hidden="true" class="fas fa-user-alt"></span>Anonymous</p>
-            </div><a class="btn btn-small" href="">Read More</a>
+            <div class="[ card__info ] [ flex-space ]">
+              <time class="fs-200 text-neutral-900" datetime="2021-08-06"><span aria-hidden="true" class="[ far fa-calendar ] [ text-primary-600 ]"></span>6 October 2021</time>
+              <p class="fs-200 text-neutral-900"><span aria-hidden="true" class="[ fas fa-user-alt ] [ text-primary-600 ]"></span>Anonymous</p>
+            </div><a class="[ button ]" data-type="small" href="">Read More</a>
           </div>
         </li>
         <li class="card">
-          <div class="card-img"><img alt="" src="./asset/imgs/blog-img31.png"></div>
-          <div class="card-title">
+          <img loading="lazy"  alt="" src="./asset/imgs/blog-img31.png">
+          <div class="card__body">
             <h3 class="fs-600 fw-500">Natural Soap is Made With Natural Ingredients</h3>
-            <div class="flex-space">
-              <p class="fs-200"><span aria-hidden="true" class="far fa-calendar"></span>6 October 2021</p>
-              <p class="fs-200"><span aria-hidden="true" class="fas fa-user-alt"></span>Anonymous</p>
-            </div><a class="btn btn-small" href="">Read More</a>
+            <div class="[ card__info ] [ flex-space ]">
+              <time class="fs-200 text-neutral-900" datetime="2021-08-06"><span aria-hidden="true" class="[ far fa-calendar ] [ text-primary-600 ]"></span>6 October 2021</time>
+              <p class="fs-200 text-neutral-900"><span aria-hidden="true" class="[ fas fa-user-alt ] [ text-primary-600 ]"></span>Anonymous</p>
+            </div><a class="[ button ]" data-type="small" href="">Read More</a>
           </div>
         </li>
         <li class="card">
-          <div class="card-img"><img alt="" src="./asset/imgs/hello1.png"></div>
-          <div class="card-title">
+          <img loading="lazy"  alt="" src="./asset/imgs/hello1.png">
+          <div class="card__body">
             <h3 class="fs-600 fw-500">Always look fresh and healthy</h3>
-            <div class="flex-space">
-              <p class="fs-200"><span aria-hidden="true" class="far fa-calendar"></span>6 October 2021</p>
-              <p class="fs-200"><span aria-hidden="true" class="fas fa-user-alt"></span>Anonymous</p>
-            </div><a class="btn btn-small" href="">Read More</a>
+            <div class="[ card__info ] [ flex-space ]">
+              <time class="fs-200 text-neutral-900" datetime="2021-08-06"><span aria-hidden="true" class="[ far fa-calendar ] [ text-primary-600 ]"></span>6 October 2021</time>
+              <p class="fs-200 text-neutral-900"><span aria-hidden="true" class="[ fas fa-user-alt ] [ text-primary-600 ]"></span>Anonymous</p>
+            </div><a class="[ button ]" data-type="small" href="">Read More</a>
           </div>
         </li>
       </ul>
-    </article><!--=============== Contact Us! ===============-->
-    <section class="contact container" aria-labelledby="contact-title">
-      <div class="main-title flex-space">
+    </article>
+    <!--=============== Contact Us! ===============-->
+    <section aria-labelledby="contact-title" class="[ contact ] [ container ]">
+      <header class="[ headline ] [ flex-space ]">
         <h2 id="contact-title">Contact Us!</h2>
-      </div>
-      <div class="contact-content flex-row center-xy flex-wrap">
-        <div class="contact-content__cta bg-primary-600 text-neutral-100 flow">
+      </header>
+      <div class="[ contact-content ] [ flex-column-responsive center-xy flex-wrap ]">
+        <div class="[ contact-content__cta ] [ bg-primary-600 text-neutral-100 ] [ flex-1 ]">
           <h3 class="fs-900 fw-400 ff-didotLTStd">Feel free to contact us and we will get back to you within one business day.</h3>
           <ul role="list">
             <li>
               <a href="">
-              <address class="flex-row center-y fs-500">
-                <span aria-hidden="true" class="fas fa-map-marker-alt grid center-xy fs-600 text-primary-600 bg-neutral-100"></span>1565 Rowland Street&#44; Bronx&#44; New York&#44; 10461&#44; USA
+              <address class="[ center-y ] [ fs-500 ]">
+                <span aria-hidden="true" class="[ fas fa-map-marker-alt ] [ grid center-xy ] [ fs-600 text-primary-600 bg-neutral-100 ]"></span>1565 Rowland Street&#44; Bronx&#44; New York&#44; 10461&#44; USA
               </address></a>
             </li>
             <li>
               <a href="">
-              <p class="flex-row grid center-y fs-500"><span aria-hidden="true" class="fas fa-mobile-alt grid center-xy fs-600 text-primary-600 bg-neutral-100"></span>+92 321 1234567</p></a>
+              <p class="[ center-y ] [ fs-500 ]"><span aria-hidden="true" class="[ fas fa-mobile-alt ] [ grid center-xy ] [ fs-600 text-primary-600 bg-neutral-100 ]"></span>+92 321 1234567</p></a>
             </li>
             <li>
               <a href="">
-              <p class="flex-row grid center-y fs-500"><span aria-hidden="true" class="fas fa-envelope grid center-xy fs-600 text-primary-600 bg-neutral-100"></span>hello@mail.com</p></a>
+              <p class="[ center-y ] [ fs-500 ]"><span aria-hidden="true" class="[ fas fa-envelope ] [ grid center-xy ] [ fs-600 text-primary-600 bg-neutral-100 ]"></span>hello@mail.com</p></a>
             </li>
           </ul>
           <div class="contact-content__follow">
-            <h4 class="ff-didotLTStd fs-600 fw-400">Follow Us On</h4>
+            <h4 class="fs-600 fw-400 ff-didotLTStd">Follow Us On</h4>
             <ul class="flex-row" role="list">
               <li>
-                <a href=""><span aria-hidden="true" class="fas fa-home grid center-xy fs-500 text-primary-600 bg-neutral-100"></span></a>
+                <a href=""><span aria-hidden="true" class="[ fas fa-home ] [ grid center-xy ] [ fs-500 text-primary-600 bg-neutral-100 ]"></span></a>
               </li>
               <li>
-                <a href=""><span aria-hidden="true" class="fas fa-home grid center-xy fs-500 text-primary-600 bg-neutral-100"></span></a>
+                <a href=""><span aria-hidden="true" class="[ fas fa-home ] [ grid center-xy ] [ fs-500 text-primary-600 bg-neutral-100 ]"></span></a>
               </li>
               <li>
-                <a href=""><span aria-hidden="true" class="fas fa-home grid center-xy fs-500 text-primary-600 bg-neutral-100"></span></a>
+                <a href=""><span aria-hidden="true" class="[ fas fa-home ] [ grid center-xy ] [ fs-500 text-primary-600 bg-neutral-100 ]"></span></a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="contact-content__form">
-          <form action="#" class="flex-row" method="get">
+        <div class="[ contact-content__form ] [ flex-1 ]">
+          <form action="#" class="flex-row flex-col" method="get">
             <input class="bg-secondary-200 fs-500" placeholder="Enter your name..." type="text"> <input class="bg-secondary-200 fs-500" placeholder="Enter your email..." type="email"> 
-            <textarea class="bg-secondary-200 fs-500" placeholder="Enter your message..."></textarea> <button class="btn fs-500 fw-400 bg-primary-600 text-neutral-100" type="submit">Submit</button>
+            <textarea class="[ bg-secondary-200 fs-500 ] [ flex-1 ]" placeholder="Enter your message..."></textarea> <button class="btn fs-500 fw-400 bg-primary-600 text-neutral-100" role="button" type="submit">Submit</button>
           </form>
         </div>
       </div>
     </section>
-  </main><!--=============== FOOTER ===============-->
-  <footer class="sit-foot bg-primary-600 text-neutral-100" role="contentinfo">
-    <div class="flex-space flex-wrap align-items-flex-start container">
+  </main>
+  <!--=============== FOOTER ===============-->
+  <footer class="[ sit-foot ] [ bg-primary-600 text-neutral-100 ]" role="contentinfo">
+    <div class="[ flex-space flex-wrap align-items-flex-start ] [ container ]">
       <div>
         <h2 class="fs-700">Freshwaves LLC</h2>
         <p class="fs-500">The innovation of this marvel cream&#44; dates back to 1948. In Veyangoda&#44; a city in the Gampaha District&#44; was an Ayurvedic shop that was owned by a renowned Ayurvedic Physician&#44; by the name of Dr. R. D. P Jayaratne&#44; he inherited this Ayurvedic shop from his forefathers.</p>
       </div>
-      <div class="sit-foot__link">
+      <div class="sit-foot__navigation">
         <h2 class="fs-700">Quick Links</h2>
         <nav aria-label="secondary" tabindex="-1">
           <ul class="grid" role="list">
@@ -306,25 +319,27 @@
       </div>
       <div class="sit-foot__contact">
         <h2 class="fs-700">Contact</h2>
-        <ul class="grid" role="list">
-          <li>
-            <a href="">
-            <address class="flex-row center-y fs-500">
-              <span aria-hidden="true" class="fas fa-map-marker-alt grid center-xy text-primary-600 bg-neutral-100 fs-600"></span>1565 Rowland Street&#44; Bronx&#44; New York&#44; 10461&#44; USA
-            </address></a>
-          </li>
-          <li>
-            <a href="">
-            <p class="flex-row center-y fs-500"><span aria-hidden="true" class="fas fa-mobile-alt grid center-xy text-primary-600 bg-neutral-100 fs-600"></span>+92 321 1234567</p></a>
-          </li>
-          <li>
-            <a href="">
-            <p class="flex-row center-y fs-500"><span aria-hidden="true" class="fas fa-envelope grid center-xy text-primary-600 bg-neutral-100 fs-600"></span>hello@mail.com</p></a>
-          </li>
-        </ul>
+        <nav tabindex="-1">
+          <ul class="grid" role="list">
+            <li>
+              <a href="">
+              <address class="[ center-y ] [ fs-500 ]">
+                <span aria-hidden="true" class="[ fas fa-map-marker-alt ] [ grid center-xy ] [ text-primary-600 bg-neutral-100 fs-600 ]"></span>1565 Rowland Street&#44; Bronx&#44; New York&#44; 10461&#44; USA
+              </address></a>
+            </li>
+            <li>
+              <a href="">
+              <p class="[ center-y ] [ fs-500 ]"><span aria-hidden="true" class="[ fas fa-mobile-alt ] [ grid center-xy ] [ text-primary-600 bg-neutral-100 fs-600 ]"></span>+92 321 1234567</p></a>
+            </li>
+            <li>
+              <a href="">
+              <p class="[ center-y ] [ fs-500 ]"><span aria-hidden="true" class="[ fas fa-envelope ] [ grid center-xy ] [ text-primary-600 bg-neutral-100 fs-600 ]"></span>hello@mail.com</p></a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
-    <div class="copyright container flex-row center-x">
+    <div class="[ copyright ] [ container ] [ center-x ]">
       <p class="text-center fs-500">Copyrights. All rights reserved.</p>
     </div>
   </footer><!--========== JS ==========-->

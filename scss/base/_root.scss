@@ -7,19 +7,19 @@
   }
 
   // Font Size
-  @each $screen-size, $property in $type-scale {
-    @if $screen-size == small {
-      @each $prop, $value in $property {
+  // @each $screen-size, $property in $type-scale {
+  //   @if $screen-size == small {
+      @each $prop, $value in $type-scale {
         --fs-#{$prop}: #{$value};
       }
-    } @else {
-      @include breakpoint(large) {
-        @each $prop, $value in $property {
-          --fs-#{$prop}: #{$value};
-        }
-      }
-    }
-  }
+    // } @else {
+    //   @include breakpoint(large) {
+    //     @each $prop, $value in $property {
+    //       --fs-#{$prop}: #{$value};
+    //     }
+    //   }
+    // }
+  // }
 
    // Font Weight
    @each $radius, $radius-value in $border-radius {

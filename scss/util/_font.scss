@@ -1,5 +1,16 @@
-@each $screen-size, $property in $type-scale {
-  @each $prop, $value in $property {
+@each $prop, $value in $type-scale {
+  @if $prop == 'xl' {
+    .fs-#{$prop} {
+      font-size: var(--fs-#{$prop});
+      line-height: 0.87;
+    }
+  }
+  @if $prop == '900' {
+    .fs-#{$prop} {
+      font-size: var(--fs-#{$prop});
+      line-height: 0.92;
+    }
+  } @else {
     .fs-#{$prop} {
       font-size: var(--fs-#{$prop});
     }

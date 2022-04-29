@@ -1,12 +1,7 @@
 .site-head {
-  padding-top: 1.875rem;
+  padding-top: 3.1875rem;
 
-  &__logo {
-    flex: 1;
-  }
-
-  &__middle {
-    gap: 2.75rem;
+  &__navigation {
     @include breakpoint-down(large) {
       justify-content: center;
       position: absolute;
@@ -18,16 +13,21 @@
         transform: translateX(0);
       }
     }
-  }
 
-  &__navigation {
-    > ul {
-      gap: 2.75rem;
+    nav {
+      > ul {
+        li {
+          margin-inline-start: 2.75rem;
+          @include breakpoint-down(large) {
+            margin-inline-start: 0;
+            margin-block-start: 1.5rem;
+          }
+        }
+      }
     }
   }
 
   [role='button'] {
-    cursor: pointer;
     @include breakpoint(xlarge) {
       display: none;
     }

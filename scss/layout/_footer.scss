@@ -1,7 +1,8 @@
 .sit-foot {
   margin-top: 10rem;
   padding: 3.25rem 0;
-  & > .container {
+  
+  > .container {
     margin-bottom: 1.625rem;
     gap: 3rem 1rem;
     @include breakpoint-down(small) {
@@ -9,35 +10,39 @@
     }
 
     h2 {
-      margin-bottom: 3.125rem;
       color: inherit;
     }
 
     p {
       --width: 39ch;
-      line-height: 1.875rem;
       color: inherit;
+      margin-top: 3.125rem;
+      line-height: 1.875rem;
     }
   }
 
-  &__link {
-    ul {
-      gap: 1rem;
-      color: inherit;
-
-      > li {
+  &__navigation {
+    nav {
+      margin-top: 3.125rem;
+      ul {
         color: inherit;
-
-        > a {
+  
+        > li {
           color: inherit;
+          margin-top: 1rem;
+  
+          > a {
+            color: inherit;
+          }
         }
       }
     }
   }
 
   &__contact {
+    nav {
+     margin-top: 3.125rem;
     ul {
-      gap: 2.25rem;
       > li {
         > a {
           > * {
@@ -52,6 +57,7 @@
       }
     }
   }
+}
 
   .copyright {
     p {

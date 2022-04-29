@@ -6,8 +6,16 @@
   display: flex;
 }
 
+.flex-1 {
+  flex: 1;
+}
+
 [class*='flex-wrap'] {
   flex-wrap: wrap;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .align-content-between {
@@ -29,10 +37,11 @@
   align-items: center;
 }
 
-.flex-row-responsive {
+.flex-column-responsive {
   display: flex;
   flex-direction: row;
-
+  align-items: center;
+  
   @include breakpoint-down(large) {
     flex-direction: column;
   }

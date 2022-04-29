@@ -1,4 +1,4 @@
-.main {
+.homepage {
   .hero {
     padding-top: min(13vw, 11.25rem);
     padding-bottom: 9.1875rem;
@@ -10,10 +10,6 @@
         flex-direction: column-reverse;
       }
 
-      a {
-        padding: 1.6875rem min(4vw,2.5em);
-      }
-
       a:first-of-type {
         margin-inline-end: min(3vw, 3rem);
       }
@@ -23,61 +19,52 @@
       }
     }
 
-    &-text {
-      margin-block-end: 1.8125rem;
-      margin-block-start: 1.875rem;
-      line-height: 129%;
+    &__description {
+      line-height: 1.29;
     }
 
-    &-img {
-      height: fit-content;
-      width: fit-content;
-
+    img {
       background: linear-gradient(
         270deg,
         hsla(36, 60%, 49%, 0.4) -51.59%,
         var(--clr-primary-600) 100%
       );
       border-radius: var(--border-radius-12);
-
-      img {
-        padding: 1.4375rem 1.625rem 1.125rem 1.8125rem;
-      }
+      padding: 1.4375rem 1.625rem 1.125rem 1.8125rem;
     }
   }
 
   .products {
     margin-top: 8.3125rem;
 
-    .cards {
-      > .card {
-        figure {
-          width: fit-content;
+    .card {
+      figure {
+        @include pseudo($top: 0, $left: 0) {
+          background: var(--clr-primary-600);
+          mix-blend-mode: darken;
+          opacity: 0.65;
+          width: 100%;
+          height: 100%;
+          border-radius: var(--border-radius-12);
+        }
 
-          @include pseudo($top: 0, $left: 0) {
-            background: var(--clr-primary-600);
-            mix-blend-mode: darken;
-            opacity: 0.65;
-            width: 100%;
-            height: 100%;
-            border-radius: var(--border-radius-12);
-          }
+        img {
+          border-radius: var(--border-radius-12);
+        }
 
-          img {
-            border-radius: var(--border-radius-12);
-          }
+        figcaption {
+          @include position(
+            absolute,
+            $right: 0,
+            $bottom: 0,
+            $left: 0,
+            $z-index: 2
+          );
+          margin-block-end: 1rem;
+          margin-inline: 5%;
 
           h3 {
-            @include position(
-              absolute,
-              $right: 0,
-              $bottom: 0,
-              $left: 0,
-              $z-index: 2
-            );
             line-height: 200%;
-            margin-block-end: 1rem;
-            margin-inline: 5%;
           }
         }
       }
@@ -87,21 +74,19 @@
   .soaps {
     margin-top: 17.5rem;
 
-    .cards {
-      .card {
-        border: 1px solid var(--clr-primary-600);
-        max-width: 24.9375rem;
-        height: 31.25rem;
-        border-radius: var(--border-radius-20);
-        overflow: hidden;
-        @include breakpoint-down(small) {
-          height: fit-content;
-        }
+    .card {
+      border: 1px solid var(--clr-primary-600);
+      max-width: 24.9375rem;
+      height: 31.25rem;
+      border-radius: var(--border-radius-20);
+      overflow: hidden;
+      @include breakpoint-down(small) {
+        height: fit-content;
+      }
 
-        &-body {
-          padding: 2.375rem 2.43rem 2.4375rem 1.25rem;
-          height: 13.625rem;
-        }
+      &__body {
+        padding: 2.375rem 2.43rem 2.4375rem 1.25rem;
+        height: 13.625rem;
       }
     }
   }
@@ -109,26 +94,24 @@
   .categories {
     margin-top: 17.5rem;
 
-    .cards {
-      > .card {
-        position: relative;
-        border: 1px solid var(--clr-primary-600);
+    .card {
+      position: relative;
+      border: 1px solid var(--clr-primary-600);
 
-        .line {
-          width: 100%;
-          height: 0.8125rem;
-        }
+      .line {
+        width: 100%;
+        height: 0.8125rem;
+      }
 
-        h3 {
-          margin-block: 2.6875rem;
-        }
+      h3 {
+        margin-block: 2.6875rem;
+        margin-inline: auto;
       }
     }
   }
 
-  .we {
-    position: relative;
-    height: 74.1875rem;
+  .about-us {
+    height: min(160vw, 74.1875rem);
     margin-top: 13.4375rem;
     background-image: url('../asset/imgs/about-img1.png');
     background-repeat: no-repeat;
@@ -149,20 +132,22 @@
       }
     }
 
-    &-headline {
+    .headline {
+      border-bottom: 1px solid var(--clr-neutral-100);
+      margin-bottom: 6.4375rem;
+
       > h2 {
-        border-bottom: 1px solid var(--clr-neutral-100);
-        margin-bottom: 6.4375rem;
+        color: inherit;
       }
     }
 
-    &-content {
+    &__content {
       @include breakpoint-down(large) {
         justify-content: center;
       }
     }
 
-    &-description {
+    &__description {
       @include breakpoint-down(large) {
         & > * {
           margin-inline: auto;
@@ -170,20 +155,22 @@
       }
 
       h3 {
-        margin-bottom: 1.875rem;
-        max-width: 23ch;
+        color: inherit;
       }
 
       p {
         --width: 39ch;
-        line-height: 150%;
-        margin-bottom: 4.1875rem;
+        color: inherit;
+        margin-top: 1.875rem;
+      }
+
+      .button {
+        margin-top: 4.1875rem;
       }
     }
 
-    &-img {
-      height: fit-content;
-      width: fit-content;
+    img {
+      width: 50%;
       padding: 1.0625rem 0.625rem 1.1875rem 1.125rem;
       @include breakpoint-down(large) {
         display: none;
@@ -193,40 +180,36 @@
 
   .news {
     margin-top: 8.75rem;
-    .cards {
-      .card {
-        max-width: 24.9375rem;
-        border: 1px solid var(--clr-primary-600);
-        border-radius: var(--border-radius-12);
 
-        &-img {
-          border-radius: var(--border-radius-12) var(--border-radius-12) 0 0;
-          overflow: hidden;
+    .card {
+      border: 1px solid var(--clr-primary-600);
+      border-radius: var(--border-radius-12);
+      overflow: hidden;
+
+      &__body {
+        padding: 0 0.5rem 3.4375rem 1rem;
+
+        h3 {
+          margin-top: 2.375rem;
         }
+      }
 
-        &-title {
-          padding-inline-start: 1rem;
-          h3 {
-            margin-top: 2.375rem;
-            margin-bottom: 1.4375rem;
+      &__info {
+        margin-top: 1.4375rem;
+
+        > * {
+          > * {
+            margin-inline-end: 0.5rem;
           }
 
-          p {
-            margin-bottom: 2rem;
-
-            > * {
-              margin-right: 0.5rem;
-            }
-          }
-
-          p:last-of-type {
+          &:last-child {
             padding-right: 5.125rem;
           }
         }
+      }
 
-        a {
-          margin-bottom: 3.4375rem;
-        }
+      .button {
+        margin-top: 2rem;
       }
     }
   }
@@ -236,12 +219,8 @@
 
     &-content {
       gap: 3rem 6.125rem;
-      @include breakpoint-down(large) {
-        flex-direction: column;
-      }
 
       &__cta {
-        flex: 1;
         padding: 9.5rem 8.125rem;
         height: 62.8125rem;
         @include breakpoint-down(large) {
@@ -249,30 +228,35 @@
           width: 100%;
         }
 
-        h3 {
-          line-height: 92%;
-          max-width: 18ch;
-        }
+        > ul {
+          margin-top: 3.0625rem;
 
-        a {
-          color: inherit;
+          li {
+            margin-top: 2.25rem;
 
-          > * {
-            color: inherit;
-            > * {
-              height: 3.5625rem;
-              aspect-ratio: 1 /1;
-              margin-inline-end: 1rem;
-              border-radius: var(--border-radius-8);
+            a {
+              color: inherit;
+
+              > * {
+                color: inherit;
+
+                > * {
+                  height: 3.5625rem;
+                  aspect-ratio: 1 /1;
+                  margin-inline-end: 1rem;
+                  border-radius: var(--border-radius-8);
+                }
+              }
             }
           }
         }
       }
 
       &__follow {
+        margin-top: 3.75rem;
+
         h4 {
           color: inherit;
-          line-height: 100%;
         }
 
         span {
@@ -285,7 +269,6 @@
       }
 
       &__form {
-        flex: 1;
         padding: 4.3125rem 3.4375rem;
         height: 58.75rem;
         border-radius: var(--border-radius-15);
@@ -297,32 +280,32 @@
         }
 
         form {
-          flex-direction: column;
           height: 100%;
         }
 
         input,
         textarea {
-          border: none;
-          outline: none;
+          border: 0;
+          outline: 0;
           padding-left: 2.625rem;
         }
 
         input {
           height: 4.375rem;
-          margin-bottom: 5.8125rem;
           border-radius: var(--border-radius-6);
+          &:not(:first-of-type) {
+            margin-top: 5.8125rem;
+          }
         }
 
         textarea {
-          flex: 1;
           padding-top: 1.125rem;
-          margin-bottom: 3.9375rem;
+          margin-top: 5.8125rem;
           resize: none;
         }
 
         button {
-          cursor: pointer;
+          margin-top: 3.9375rem;
           height: 4.375rem;
         }
       }

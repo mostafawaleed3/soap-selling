@@ -1,29 +1,68 @@
-.btn,
 .button {
   display: inline-block;
-  border: none;
-  text-decoration: none;
-  user-select: none;
+  border: 0;
+  text-decoration: 0;
 
-  &-head {
+  &[data-type='head'] {
+    font-size: var(--fs-300);
     font-weight: var(--fw-600);
-    color: var(--clr-neutral-100);
     background-color: var(--clr-primary-600);
+    color: var(--clr-neutral-100);
     letter-spacing: var(--letter-spacing-1);
     padding: 1.5625em;
   }
 
-  &-border-primary {
+  &[data-type='primary'] {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
     font-family: var(--ff-didotLTStd);
     font-size: var(--fs-900);
     color: var(--clr-primary-600);
     background: var(--clr-neutral-100);
     border: 1px solid var(--clr-primary-600);
-    line-height: 4.125rem;
-    padding: 1.375rem 1.5625rem;
+    line-height: 1.18em;
+    padding: 0.3em 0.636em;
+
+    > * {
+      margin-inline-end: 1rem;
+    }
+
+    @include pseudo($top: 0, $left: 0, $z-index: -1) {
+      width: 100%;
+      height: 100%;
+      background: var(--clr-primary-600);
+      transition: 0.5s;
+    }
+
+    &:hover,
+    &:focus {
+      --_space: 0.625rem;
+      @include pseudo($top: 0, $left: var(- --_space), $z-index: -1) {
+        height: calc(100% + var(--_space));
+        width: calc(100% + var(--_space));
+      }
+    }
   }
 
-  &-small {
+  &[data-type='secondary'] {
+    font-size: var(--fs-600);
+    letter-spacing: var(--letter-spacing-1);
+    background-color: var(--clr-primary-600);
+    color: var(--clr-neutral-100);
+    padding: 0.9em min(4vw, 2.88em);
+  }
+
+  &[data-type='tertiary'] {
+    font-size: var(--fs-600);
+    font-weight: var(--fw-500);
+    letter-spacing: var(--letter-spacing-1);
+    color: var(--clr-primary-600);
+    padding: 0.9em min(4vw, 2.88em);
+    border: 1px solid var(--clr-primary-600);
+  }
+
+  &[data-type='small'] {
     font-size: var(--fs-400);
     color: var(--clr-neutral-100);
     background: var(--clr-primary-600);
@@ -31,7 +70,7 @@
     border-radius: var(--border-radius-4);
   }
 
-  &-border-white {
+  &[data-type='border-white'] {
     font-size: var(--fs-800);
     font-weight: var(--fw-300);
     color: var(--clr-neutral-100);

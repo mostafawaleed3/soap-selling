@@ -4,10 +4,10 @@
 @import './base/root', './base/reset', './base/base', './base/font-face',
   './base/typography';
 
-@import './layout/columns', './layout/header', './layout/main',
-  './layout/main-title', './layout/footer';
+@import './layout/header', './layout/main',
+  './layout/footer';
 
-@import './components/button';
+@import './components/button' , './components/headline';
 
 @import './util/auto-grid', './util/container', './util/display',
   './util/color-utilities', './util/font', './util/flow',

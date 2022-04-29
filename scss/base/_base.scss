@@ -1,7 +1,7 @@
 main {
   flex: auto;
   &:focus {
-    outline: none;
+    outline: 0;
   }
 }
 
@@ -11,11 +11,11 @@ main {
 }
 
 [tabindex="-1"] {
-  outline: none;
+  outline: 0;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: 0;
   color: inherit;
   &:hover:not([class]) {
     text-underline-offset: 2px;
@@ -28,6 +28,9 @@ ul[role='list'],
 ol[role='list'] {
   padding: 0;
   margin: 0;
+}
+[role='button'] {
+  cursor: pointer;
 }
 
 address {
